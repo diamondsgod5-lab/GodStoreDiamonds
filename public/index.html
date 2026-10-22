@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#070b18">
+  <title>God Diamonds | Recargas gamer</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/"><span class="brand-icon">◆</span><span>GOD <b>DIAMONDS</b><small>RECARGAS GAMER · PERÚ</small></span></a>
+  <span class="secure"><i></i> Plataforma segura</span>
+</header>
+<main class="shell">
+  <section class="hero">
+    <div class="hero-copy"><span class="eyebrow">TU PRÓXIMA RECARGA COMIENZA AQUÍ</span>
+      <h1>Sube de nivel.<br><em>Sin esperar.</em></h1>
+      <p>Elige tu producto, verifica tu jugador y sigue tu pedido en tiempo real.</p>
+      <div class="chips"><span>✦ Free Fire</span><span>◈ Roblox</span><span>⚡ Pases</span></div>
+    </div>
+    <div class="orb" aria-hidden="true"><div class="orb-core">GD</div><span class="orb-ring"></span></div>
+  </section>
+
+  <section class="shop-card" id="shop">
+    <div class="section-heading"><div><span class="eyebrow">COMPRA RÁPIDA</span><h2>Prepara tu pedido</h2></div><span class="step">01 / 03</span></div>
+    <div class="field-grid">
+      <label>Juego<select id="game"><option value="freefire">Free Fire</option><option value="roblox">Roblox</option><option value="passes">Pases</option></select></label>
+      <label>ID de jugador<input id="playerId" maxlength="80" placeholder="Escribe tu ID" autocomplete="off"></label>
+    </div>
+    <button id="verify" class="btn btn-secondary" type="button">⌕ Verificar nickname</button>
+    <div id="nickResult" class="notice" role="status">Verifica tu ID antes de continuar.</div>
+    <label class="product-label">Selecciona tu producto<select id="product"></select></label>
+    <div class="order-summary"><span>Tu total</span><strong id="price">S/ 2.80</strong></div>
+    <button id="pay" class="btn btn-primary" disabled>Continuar al pago <span>→</span></button>
+    <p class="fineprint">El pedido se procesa manualmente después de la confirmación del pago. No compartas contraseñas de tus juegos.</p>
+  </section>
+
+  <section class="status-card hidden" id="statusCard">
+    <div class="loader-ring" id="loaderRing"><span>GD</span></div>
+    <span class="eyebrow" id="statusEyebrow">PEDIDO EN PROCESO</span>
+    <h2 id="statusTitle">Esperando confirmación</h2>
+    <p id="statusText">Completa el pago mediante el método mostrado por la pasarela. La página se actualizará automáticamente.</p>
+    <div class="progress"><span id="progressBar"></span></div>
+    <small id="statusFoot">No cierres esta pantalla mientras tu pedido esté en proceso.</small>
+    <div id="paymentDetails" class="payment-details"></div>
+  </section>
+  <section class="feature-row"><div><b>01</b><span>Verificación de ID</span></div><div><b>02</b><span>Pago validado</span></div><div><b>03</b><span>Entrega manual</span></div></section>
+</main>
+<footer>© <span id="year"></span> GOD DIAMONDS · Recargas digitales</footer>
+<script src="/socket.io/socket.io.js"></script><script src="/app.js"></script>
+</body></html>
